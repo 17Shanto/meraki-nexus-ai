@@ -1,4 +1,4 @@
-## Merali Nexus Image Classification Backend </br>
+## Meraki Nexus Image Classification Backend </br>
 This is our backend api. To evalute art class. It returns top 5 classes
 <br>
 ### Installation $ Development
