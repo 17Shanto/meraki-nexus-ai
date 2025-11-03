@@ -3,9 +3,9 @@ from PIL import Image
 import torch
 
 # Import components from our other files
-from app.schemas import ImageRequest
-from app.utils import download_image
-from app.model import (
+from schemas import ImageRequest
+from utils import download_image
+from model import (
     model, device, preprocess, 
     CLASS_NAMES, weights_tensor, total_weight
 )
