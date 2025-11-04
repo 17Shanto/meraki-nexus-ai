@@ -2,27 +2,27 @@ import torch
 from torchvision import transforms
 
 ART_STYLE_WEIGHTS = {
-    "Abstract Expressionism": 100,
-    "Pop Art": 95,
-    "Baroque": 90,
-    "Renaissance": 85,
-    "Cubism": 80,
-    "Surrealism": 75,
-    "Art Nouveau": 70,
-    "Minimalism": 65,
-    "Expressionism": 60,
-    "Futurism": 55,
-    "High Renaissance": 50,
-    "Romanticism": 45,
-    "Realism": 40,
-    "Symbolism": 35,
-    "Constructivism": 30,
-    "Op Art": 25,
-    "Art Deco": 20,
-    "Chinese Landscape": 15,
-    "Post-Impressionism": 10,
-    "Abstract Art": 0,
-    "Neo-Classicism": 5
+    "abstract_expressionism": 1000.0,
+    "surrealism": 917.4,
+    "pop_art": 875.8,
+    "abstract_art": 821.6,
+    "post_impressionism": 550.2,
+    "cubism": 461.9,
+    "minimalism": 405.3,
+    "expressionism": 367.9,
+    "chinese_landscape": 343.9,
+    "art_nouveau": 139.4,
+    "constructivism": 148.9,
+    "fauvism": 168.6,
+    "op_art": 189.3,
+    "realism": 120.7,
+    "symbolism": 94.3,
+    "futurism": 70.2,
+    "romanticism": 56.5,
+    "high_renaissance": 37.5,
+    "renaissance": 27.7,
+    "baroque": 23.6,
+    "amateur": 12.8
 }
 
 # Create lists from the dictionary, preserving order
