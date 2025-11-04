@@ -23,9 +23,9 @@ The server will be available at http://127.0.0.1:8000.
 
 **Base URL:** `/nexus-ai`
 
-### Books
+### Pradictions
 
-#### Create a book
+#### Create a Prediction
 **POST** `/evaluate`  
 
 **Body**
