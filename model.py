@@ -61,5 +61,5 @@ def load_model(model_path: str):
     return model, device, weights_tensor, total_weight
 
 
-MODEL_PATH = "./artwork-model/artwork_classification_model_efficientNet.pth"
+MODEL_PATH = "./artwork-model/artwork_classification_model_subject_2_efficientNet.pth"
 model, device, weights_tensor, total_weight = load_model(MODEL_PATH)
