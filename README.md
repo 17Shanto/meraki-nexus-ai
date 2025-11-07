@@ -16,6 +16,7 @@ fastapi dev main.py
 ```
 
 The server will be available at http://127.0.0.1:8000.
+Live api: meraki-nexus-ai.onrender.com
 
 ---
 
