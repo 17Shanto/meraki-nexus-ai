@@ -15,7 +15,7 @@ pip install -r requirements.txt
 fastapi dev main.py
 ```
 
-The server will be available at http://127.0.0.1:8000.
+The server will be available at http://127.0.0.1:8000. </br>
 Live api: meraki-nexus-ai.onrender.com
 
 ---
