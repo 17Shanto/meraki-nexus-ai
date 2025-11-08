@@ -41,27 +41,26 @@ Live api: meraki-nexus-ai.onrender.com
 ```json
 {
     "status": "success",
-    "market_value_score": 0.347290575504303,
     "predictions": [
         {
-            "class_name": "Renaissance",
-            "confidence": 0.9453256130218506
+            "class_name": "amateur",
+            "confidence": 0.9509398937225342
         },
         {
-            "class_name": "Romanticism",
-            "confidence": 0.9269545674324036
+            "class_name": "fauvism",
+            "confidence": 0.025065984576940536
         },
         {
-            "class_name": "Baroque",
-            "confidence": 0.9255679249763489
+            "class_name": "chinese_landscape",
+            "confidence": 0.014497017487883568
         },
         {
-            "class_name": "Op Art",
-            "confidence": 0.8090653419494629
+            "class_name": "art_nouveau",
+            "confidence": 0.006360294297337532
         },
         {
-            "class_name": "Post-Impressionism",
-            "confidence": 0.4038437306880951
+            "class_name": "abstract_art",
+            "confidence": 0.0015162513591349125
         }
     ]
 }
