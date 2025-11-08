@@ -32,7 +32,7 @@ Live api: meraki-nexus-ai.onrender.com
 **Body**
 ```json
 {
-  "image_url": "https://cdn.shopify.com/s/files/1/2283/9155/files/Springtime.jpg?v=1649170021"
+  "image_url": "https://goodparentingbrighterchildren.com/wp-content/uploads/2019/03/Children-drawing-PB.jpg"
 }
 
 ```
