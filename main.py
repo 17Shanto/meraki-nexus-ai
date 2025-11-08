@@ -1,13 +1,14 @@
 from fastapi import FastAPI, HTTPException
 from PIL import Image
 import torch
+import torch.nn.functional as F # Import functional
 
 # Import components from our other files
 from schemas import ImageRequest
 from utils import download_image
 from model import (
     model, device, preprocess, 
-    CLASS_NAMES, weights_tensor, total_weight
+    CLASS_NAMES # Simplified imports
 )
 
 
@@ -34,7 +35,8 @@ async def evaluate_image(request: ImageRequest):
         with torch.no_grad(): 
             output = model(input_batch)
 
-        probabilities = torch.sigmoid(output)[0]
+        # CHANGED: Use softmax (dim=1) as in your new eval script
+        probabilities = F.softmax(output, dim=1)[0]
 
 
         if len(probabilities) != len(CLASS_NAMES):
@@ -44,8 +46,8 @@ async def evaluate_image(request: ImageRequest):
             )
 
         
-        weighted_sum = torch.dot(probabilities, weights_tensor)
-        market_value = (weighted_sum / total_weight).item() 
+        # REMOVED: weighted_sum and market_value calculation
+        
         top5_probs, top5_indices = torch.topk(probabilities, 5)
         predictions = [
             {
@@ -55,9 +57,9 @@ async def evaluate_image(request: ImageRequest):
             for prob, idx in zip(top5_probs, top5_indices)
         ]
 
+        # UPDATED: Return value no longer includes market_value_score
         return {
             "status": "success",
-            "market_value_score": market_value,
             "predictions": predictions
         }
 

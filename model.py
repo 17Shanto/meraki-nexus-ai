@@ -1,33 +1,32 @@
 import torch
 from torchvision import transforms
 
-ART_STYLE_WEIGHTS = {
-    "abstract_expressionism": 1000.0,
-    "surrealism": 917.4,
-    "pop_art": 875.8,
-    "abstract_art": 821.6,
-    "post_impressionism": 550.2,
-    "cubism": 461.9,
-    "minimalism": 405.3,
-    "expressionism": 367.9,
-    "chinese_landscape": 343.9,
-    "art_nouveau": 139.4,
-    "constructivism": 148.9,
-    "fauvism": 168.6,
-    "op_art": 189.3,
-    "realism": 120.7,
-    "symbolism": 94.3,
-    "futurism": 70.2,
-    "romanticism": 56.5,
-    "high_renaissance": 37.5,
-    "renaissance": 27.7,
-    "baroque": 23.6,
-    "amateur": 12.8
-}
-
-# Create lists from the dictionary, preserving order
-CLASS_NAMES = list(ART_STYLE_WEIGHTS.keys())
-WEIGHTS_LIST = list(ART_STYLE_WEIGHTS.values())
+# NEW CLASS LIST
+# I have cleaned the list you provided (removed duplicates, fixed spelling).
+# YOU MUST VERIFY this is the correct order from your training data.
+CLASS_NAMES = [
+    "abstract_art",
+    "abstract_expressionism",
+    "amateur",
+    "art_nouveau",
+    "baroque",
+    "chinese_landscape",
+    "constructivism",
+    "cubism",
+    "expressionism",
+    "fauvism",
+    "futurism",
+    "high_renaissance",
+    "minimalism",
+    "op_art",
+    "pop_art",
+    "post_impressionism",
+    "realism",
+    "renaissance", # Corrected spelling from "reniassance"
+    "romanticism",
+    "surrealism",
+    "symbolism"
+]
 
 
 preprocess = transforms.Compose([
@@ -55,11 +54,10 @@ def load_model(model_path: str):
 
     print("Model loaded successfully.")
     
-    weights_tensor = torch.tensor(WEIGHTS_LIST, dtype=torch.float32).to(device)
-    total_weight = weights_tensor.sum()
-    
-    return model, device, weights_tensor, total_weight
+    # Removed weights_tensor and total_weight
+    return model, device
 
 
 MODEL_PATH = "./artwork-model/artwork_classification_model_subject_2_efficientNet.pth"
-model, device, weights_tensor, total_weight = load_model(MODEL_PATH)
+# Simplified the return values
+model, device = load_model(MODEL_PATH)
